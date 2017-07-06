@@ -1,7 +1,5 @@
-const {app} = require('electron')
-const {BrowserWindow} = require('electron')
-
-console.log(' => ' + __dirname);
+const electron = require('electron');
+const {app, BrowserWindow} = electron;
 
 app.on('ready', function() {
   var mainWindow = new BrowserWindow({
@@ -9,4 +7,4 @@ app.on('ready', function() {
     height: 600,
   });
   mainWindow.loadURL('file://' + __dirname + '/index.html')
-})﻿;
+});
