@@ -9,3 +9,8 @@ app.on('ready', function() {
   win.loadURL('file://' + __dirname + '/index.html');
   win.webContents.openDevTools();
 });
+
+exports.openWindow = function() {
+  var win = new BrowserWindow({width:400,height:200});
+  win.loadURL(`file://${__dirname}/bear.html`);
+};
